@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ангелина и Иван | Семейная юридическая практика</title>
+    <!-- Font Awesome (иконки) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Подключаем внешний CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+    <!-- Шапка / Название -->
+    <div class="header">
+        <h1 class="main-title">
+            <span>⚖️ Ангелина & Иван</span> 
+            <span class="title-badge">семейная практика</span>
+        </h1>
+        <p class="subtitle"><i class="fas fa-leaf leaf-icon"></i> защищаем ваши интересы с заботой</p>
+    </div>
+
+    <!-- Блок "О себе" (описание + кто мы) -->
+    <section class="card about-section">
+        <h2>🌿 О нас</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="about-highlight"><strong>Столкнулись с нарушением прав, недобросовестным партнером или сложной сделкой?</strong> Не знаете, как составить договор, чтобы он защищал именно Вас?</p>
+                <p>Семейная пара юристов, <strong>Ангелина и Иван</strong>, с опытом работы в сфере гражданского права предлагают профессиональную и чуткую правовую поддержку.</p>
+                <p>Мы работаем как одна команда, где внимательность к деталям и дотошный анализ сочетаются с пониманием человеческих ситуаций. Ваша проблема будет изучена с разных сторон, а решение будет продуманным и практичным.</p>
+                <h3 class="services-title">✨ Что мы делаем:</h3>
+                <ul class="services-list">
+                    <li>✔️ Документы «под ключ»</li>
+                    <li>✔️ Сопровождение в суде</li>
+                    <li>✔️ Правовой аудит</li>
+                    <li>✔️ Урегулирование споров</li>
+                </ul>
+                <p class="principles-box"><i class="fas fa-gavel"></i> <strong>Наши принципы:</strong> Конфиденциальность, честная оценка, индивидуальный подход.</p>
+                <p class="free-consultation">🥇 Первая краткая консультация — <span class="free-badge">Бесплатно</span></p>
+            </div>
+            <div class="about-team">
+                <i class="fas fa-balance-scale team-icon"></i>
+                <p class="team-name">Ангелина <br> <span class="team-spec">корпоративное право</span></p>
+                <i class="fas fa-handshake team-icon"></i>
+                <p class="team-name">Иван <br> <span class="team-spec">судебная защита</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок "Фоточки" (личные фото в стилизованном виде) -->
+    <section>
+        <h2>📸 Мы в работе и жизни</h2>
+        <div class="photo-strip">
+            <div class="photo-card">
+                <div class="photo-img"><i class="fas fa-user-tie"></i></div>
+                <div class="photo-caption">Иван на процессе</div>
+            </div>
+            <div class="photo-card">
+                <div class="photo-img"><i class="fas fa-user-graduate"></i></div>
+                <div class="photo-caption">Ангелина с клиентом</div>
+            </div>
+            <div class="photo-card">
+                <div class="photo-img"><i class="fas fa-scale-balanced"></i></div>
+                <div class="photo-caption">У Фемиды в гостях</div>
+            </div>
+            <div class="photo-card">
+                <div class="photo-img"><i class="fas fa-hand-holding-heart"></i></div>
+                <div class="photo-caption">Командная работа</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты для записи (кликабельные кнопки) -->
+    <section>
+        <h2>📲 Запись на консультацию</h2>
+        <div class="contact-buttons">
+            <a href="https://t.me/angelina_ivan_law" target="_blank" class="contact-btn"><i class="fab fa-telegram-plane"></i> Telegram</a>
+            <a href="tel:+79161234567" class="contact-btn"><i class="fas fa-phone-alt"></i> +7 (916) 123-45-67</a>
+        </div>
+        <p class="contact-note">* нажмите — сразу перейдёте в Telegram или в звонилку</p>
+    </section>
+
+    <!-- Прайс-лист (кликабельные кнопки с более точной информацией) -->
+    <section class="price-section">
+        <h2>💰 Прайс-лист</h2>
+        <p class="price-note"><i class="fas fa-info-circle"></i> нажмите на кнопку под услугой — узнаете детали</p>
+        <div class="price-grid">
+            <!-- данные из задания -->
+            <div class="price-item">
+                <strong>Консультация</strong> 
+                <span class="price-value">Бесплатно</span> 
+                <button class="price-btn" onclick="showDetails('Первая краткая консультация — бесплатно. При личной встрече или online до 20 минут.')">
+                    <i class="fas fa-info-circle"></i> подробнее
+                </button>
+            </div>
+            <div class="price-item">
+                <strong>Составление договора</strong> 
+                <span class="price-value">от 2 000 ₽</span> 
+                <button class="price-btn" onclick="showDetails('Договоры купли-продажи, дарения, аренды, услуг. Точная цена зависит от сложности.')">
+                    <i class="fas fa-info-circle"></i> детали
+                </button>
+            </div>
+            <div class="price-item">
+                <strong>Составление иска</strong> 
+                <span class="price-value">от 9 000 ₽</span> 
+                <button class="price-btn" onclick="showDetails('Исковые заявления в суды общей юрисдикции, арбитраж. Анализ и обоснование позиции.')">
+                    <i class="fas fa-info-circle"></i> детали
+                </button>
+            </div>
+            <div class="price-item">
+                <strong>Составление жалобы</strong> 
+                <span class="price-value">от 4 000 ₽</span> 
+                <button class="price-btn" onclick="showDetails('Апелляционные, кассационные, частные жалобы. Помощь в восстановлении сроков.')">
+                    <i class="fas fa-info-circle"></i> детали
+                </button>
+            </div>
+            <div class="price-item">
+                <strong>Составление ходатайства</strong> 
+                <span class="price-value">от 2 000 ₽</span> 
+                <button class="price-btn" onclick="showDetails('Ходатайства об истребовании доказательств, о назначении экспертизы и др.')">
+                    <i class="fas fa-info-circle"></i> детали
+                </button>
+            </div>
+            <div class="price-item">
+                <strong>Составление претензии</strong> 
+                <span class="price-value">от 4 000 ₽</span> 
+                <button class="price-btn" onclick="showDetails('Досудебная претензия контрагенту. Помогает урегулировать спор без суда.')">
+                    <i class="fas fa-info-circle"></i> детали
+                </button>
+            </div>
+            <div class="price-item">
+                <strong>Составление требования</strong> 
+                <span class="price-value">от 2 000 ₽</span> 
+                <button class="price-btn" onclick="showDetails('Требования о возврате долга, устранении недостатков и пр.')">
+                    <i class="fas fa-info-circle"></i> детали
+                </button>
+            </div>
+            <div class="price-item">
+                <strong>Составление обращения</strong> 
+                <span class="price-value">от 1 000 ₽</span> 
+                <button class="price-btn" onclick="showDetails('Обращения в госорганы, жалобы в прокуратуру, заявления.')">
+                    <i class="fas fa-info-circle"></i> детали
+                </button>
+            </div>
+            <div class="price-item">
+                <strong>Составление согласия</strong> 
+                <span class="price-value">от 1 000 ₽</span> 
+                <button class="price-btn" onclick="showDetails('Согласия на обработку данных, согласия супруга на сделки и др.')">
+                    <i class="fas fa-info-circle"></i> детали
+                </button>
+            </div>
+            <div class="price-item">
+                <strong>Правовой анализ</strong> 
+                <span class="price-value">от 2 000 ₽</span> 
+                <button class="price-btn" onclick="showDetails('Экспертиза документов, выявление рисков, рекомендации.')">
+                    <i class="fas fa-info-circle"></i> детали
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы с возможностью оставить отзыв задним числом -->
+    <section class="reviews-section">
+        <h2>🗣 Отзывы клиентов</h2>
+        <div class="card review-card">
+            <div class="review-list" id="reviewList">
+                <!-- Предустановленные отзывы -->
+                <div class="review-item">
+                    <div class="review-header"><span>Марина С.</span><span class="review-date">12.02.2025</span></div>
+                    <div class="review-text">Очень помогли с договором аренды. Иван досконально всё проверил, а Ангелина объяснила нюансы. Спасибо!</div>
+                </div>
+                <div class="review-item">
+                    <div class="review-header"><span>Алексей К.</span><span class="review-date">05.01.2025</span></div>
+                    <div class="review-text">Выиграли суд по наследству! Профессионалы своего дела, переживали за дело как за своё.</div>
+                </div>
+                <div class="review-item">
+                    <div class="review-header"><span>Елена В.</span><span class="review-date">23.11.2024</span></div>
+                    <div class="review-text">Бесплатная консультация была очень содержательной, сразу поняли перспективы. Подготовили претензию — контрагент сразу оплатил.</div>
+                </div>
+            </div>
+
+            <!-- Добавление отзыва (можно задним числом) -->
+            <div class="add-review">
+                <h4><i class="far fa-edit"></i> Оставить отзыв (можно указать любую дату)</h4>
+                <div class="review-input-group">
+                    <input type="text" id="reviewName" placeholder="Ваше имя" value="Михаил">
+                    <input type="date" id="reviewDate">
+                    <textarea id="reviewMessage" placeholder="Ваш отзыв..." rows="2">Спасибо за сопровождение сделки купли-продажи! Всё четко.</textarea>
+                    <button onclick="addReview()"><i class="fas fa-paper-plane"></i> Добавить</button>
+                </div>
+                <p class="review-hint"><i class="fas fa-history"></i> отзыв появится в списке выше (имитация «заднего числа»).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Нижняя часть с дополнительной Фемидой (текст) -->
+    <hr class="divider">
+    <footer>
+        <p>⚖️ Семейная юридическая практика Ангелины и Ивана © 2025 | Забота о праве и людях</p>
+        <p class="footer-icons">⚖️🐢🌿</p>
+    </footer>
+</div>
+
+<!-- Подключаем внешний JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
