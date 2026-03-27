@@ -103,6 +103,8 @@ h2 {
     flex: 2;
     min-width: 300px;
     color: var(--gray-dark);
+    display: flex;
+    flex-direction: column;
 }
 
 .highlight {
@@ -151,22 +153,27 @@ h2 {
     margin-left: 10px;
 }
 
+/* Общее фото под текстовой частью */
 .together-photo {
-    text-align: center;
+    width: 100%;
+    margin-top: 20px;
     padding: 20px;
     background: rgba(184, 151, 91, 0.05);
     border: 2px solid var(--bronze-light);
+    text-align: center;
 }
 
 .together-photo img {
     width: 100%;
-    max-width: 500px;
     height: auto;
+    max-width: 100%;
     border: 4px solid var(--bronze);
+    display: block;
+    margin: 0 auto;
 }
 
-/* Вертикальное расположение фотографий Ангелины и Ивана */
-.team-photos-vertical {
+
+.team-photos {
     flex: 1;
     min-width: 380px;
     background: rgba(184, 151, 91, 0.05);
@@ -179,13 +186,13 @@ h2 {
     align-items: center;
 }
 
-.team-member-vertical {
+.team-member {
     text-align: center;
     width: 100%;
     max-width: 400px;
 }
 
-.team-member-vertical img {
+.team-member img {
     width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
@@ -194,66 +201,56 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.team-member-vertical img:hover {
+.team-member img:hover {
     transform: scale(1.02);
     border-color: var(--bronze-dark);
 }
 
-.team-member-vertical p {
+.team-member p {
     font-size: 2rem;
     color: var(--dark-green);
     margin-top: 15px;
+    margin-bottom: 15px;
     font-weight: 600;
 }
 
-.contacts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-    margin: 40px 0 20px;
-}
 
-.contact-group {
+.member-contacts {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    min-width: 300px;
+    gap: 12px;
+    margin-top: 10px;
+    width: 100%;
 }
 
-.contact-btn {
+.member-contact-link {
     background: var(--white);
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    font-weight: 600;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 500;
     color: var(--gray-dark);
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     border: 2px solid var(--bronze);
     transition: all 0.3s ease;
+    width: 100%;
 }
 
-.contact-btn i {
-    font-size: 1.5rem;
+.member-contact-link i {
+    font-size: 1.2rem;
     color: var(--bronze-dark);
 }
 
-.contact-btn:hover {
+.member-contact-link:hover {
     background: var(--dark-green);
     color: var(--bronze);
 }
 
-.contact-btn:hover i {
+.member-contact-link:hover i {
     color: var(--bronze);
-}
-
-.note {
-    text-align: center;
-    color: var(--gray);
-    font-style: italic;
 }
 
 .price-section {
@@ -408,7 +405,7 @@ footer {
     font-size: 1.1rem;
 }
 
-/* Адаптивная версия для мобильных устройств - фотографии полностью видимы */
+/* Адаптивная версия для мобильных устройств */
 @media (max-width: 768px) {
     .wrapper {
         padding: 15px;
@@ -427,19 +424,18 @@ footer {
         font-size: 1rem;
     }
     
-    /* Адаптация блока с фотографиями */
-    .team-photos-vertical {
+    .team-photos {
         min-width: auto;
-        padding: 20px;
-        gap: 25px;
+        padding: 30px 20px;
+        gap: 30px;
     }
     
-    .team-member-vertical {
+    .team-member {
         max-width: 100%;
         width: 100%;
     }
     
-    .team-member-vertical img {
+    .team-member img {
         width: 100%;
         max-width: 100%;
         height: auto;
@@ -447,45 +443,36 @@ footer {
         object-fit: cover;
     }
     
-    .team-member-vertical p {
+    .team-member p {
         font-size: 1.5rem;
-        margin-top: 10px;
+        margin-top: 12px;
+        margin-bottom: 12px;
     }
     
-    /* Фото "Вместе" на мобильных */
+    .member-contacts {
+        gap: 10px;
+    }
+    
+    .member-contact-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .member-contact-link i {
+        font-size: 1rem;
+    }
+    
+    
     .together-photo {
         padding: 15px;
+        margin-top: 15px;
     }
     
     .together-photo img {
-        max-width: 100%;
         width: 100%;
         height: auto;
     }
     
-    /* Контактные кнопки */
-    .contacts {
-        gap: 20px;
-        margin: 25px 0 15px;
-    }
-    
-    .contact-group {
-        min-width: auto;
-        width: 100%;
-        gap: 12px;
-    }
-    
-    .contact-btn {
-        padding: 12px 20px;
-        font-size: 1rem;
-        width: 100%;
-    }
-    
-    .contact-btn i {
-        font-size: 1.2rem;
-    }
-    
-    /* Прайс-лист */
     .price-grid {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -504,7 +491,6 @@ footer {
         margin: 10px 0;
     }
     
-    /* Отзывы */
     .reviews-section {
         margin-top: 40px;
     }
@@ -523,7 +509,6 @@ footer {
         font-size: 0.95rem;
     }
     
-    /* Форма отзыва */
     .add-review {
         padding: 20px;
     }
@@ -544,12 +529,10 @@ footer {
         min-width: auto;
     }
     
-    /* Карточка */
     .card {
         padding: 20px;
     }
     
-    /* Текст */
     .about-text p, 
     .services-list li,
     .principles {
@@ -568,6 +551,7 @@ footer {
     .free-consultation {
         font-size: 1rem;
         padding: 15px;
+        margin-bottom: 20px;
     }
     
     .free-badge {
@@ -576,24 +560,15 @@ footer {
         margin-left: 0;
     }
     
-    .note {
-        font-size: 0.85rem;
-    }
-    
     footer {
         font-size: 0.9rem;
     }
 }
 
-/* Для очень маленьких экранов (до 480px) */
+
 @media (max-width: 480px) {
     .wrapper {
         padding: 10px;
-    }
-    
-    .team-member-vertical img {
-        max-width: 280px;
-        margin: 0 auto;
     }
     
     .main-title {
@@ -602,5 +577,9 @@ footer {
     
     h2 {
         font-size: 1.5rem;
+    }
+    
+    .member-contact-link {
+        font-size: 0.85rem;
     }
 }
